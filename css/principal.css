@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: #859285;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    height: 80%;
+    width: 60vh;
+    margin: 2vh;
+    border-radius: 2vh;
+    background-color: #495058;
+    box-shadow: 1px 1px 7px 0px #595959;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#resultado {
+    height: 18vh;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    margin: 2vh;
+    border-radius: 3vh;
+    box-shadow: 0px 0px 11px 1px rgb(32, 32, 32);
+    color: black;
+    font-size: 1.4rem;
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
+}
+
+form{
+    height: 63%;
+    margin: 1vh;
+    width: auto;
+   
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    
+    
+    
+}
+#numbers{
+    height: 100%;
+    width: 38vh;
+    display: grid;
+    grid-template-columns: 13vh 13vh 13vh  ;
+    grid-template-rows: 12vh 12vh 12vh ;
+    
+}
+
+
+button{
+    height: 10vh;
+    width: 10vh;
+    border: none;
+    border-radius: 1vh;
+    box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+    margin: 1vh;
+    cursor: pointer;
+    color: white;
+    background-color: #495058;  
+}
+
+button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.opera{
+ background-color: #5ea17c;   
+}
+.opera:hover{
+    background-color: #00385e;
+    color: white;
+}
+#operadores{
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 13vh ;
+    grid-template-rows: 12vh 12vh 12vh ;
+}
+
+        
+/* Responsividade */
+@media (max-width: 785px) {
+    #resultado{
+        height: 18vh;
+        width: 37vh;
+        font-size: 1.4rem;
+        padding: 1vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        white-space: nowrap; 
+        
+    }
+    button{
+        height: 8vh;
+        width: 8vh;
+    }
+
+    #numbers {
+        height: 100%;
+        width: 30vh;
+        display: grid;
+        grid-template-columns: 10vh 10vh 10vh;
+        grid-template-rows: 11vh 11vh 11vh;
+    }
+
+    #operadores {
+        height: 100%;
+        width: auto;
+        display: grid;
+        grid-template-columns: 10vh;
+        grid-template-rows: 11vh 11vh 11vh;
+    }
+   
+}

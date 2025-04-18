@@ -1,0 +1,149 @@
+:root {
+    --cor-fundo: #2c3e50;
+    --cor-calculadora: #34495e;
+    --cor-botoes: #7f8c8d;
+    --cor-operacoes: #16a085;
+    --cor-operacoes-hover: #1abc9c;
+    --cor-display: #ecf0f1;
+    --cor-texto: #2c3e50;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+section {
+    background-color: var(--cor-calculadora);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--sombra);
+    transition: all 0.3s ease;
+}
+
+#resultado {
+    height: 100px;
+    width: 100%;
+    background-color: var(--cor-display);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: right;
+    color: var(--cor-texto);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#numbers {
+    display: contents;
+}
+
+#operadores {
+    display: contents;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--cor-botoes);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.opera {
+    background-color: var(--cor-operacoes);
+}
+
+.opera:hover {
+    background-color: var(--cor-operacoes-hover);
+}
+
+/* Botão de limpar (C) tem estilo diferente */
+button[onclick="limpar()"] {
+    background-color: #e74c3c;
+}
+
+button[onclick="limpar()"]:hover {
+    background-color: #c0392b;
+}
+
+/* Botão de igual (=) tem estilo diferente */
+button[type="submit"] {
+    background-color: #3498db;
+    grid-column: span 2;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+    
+    #resultado {
+        height: 80px;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px) {
+    button {
+        height: 45px;
+    }
+}
